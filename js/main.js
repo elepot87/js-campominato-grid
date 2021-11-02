@@ -44,8 +44,40 @@ btnPlay.addEventListener("click", function () {
   // Generazione della griglia totale (div con classe grid)
   const grid = document.createElement("div");
   grid.classList.add("grid");
-  wrapGrid.append(grid);
 
   //   Generare le celle/square
-  for (let i = 1; i <= cellsNumber; i++) {}
+  for (let i = 1; i <= cellsNumber; i++) {
+    const squareElement = createGridSquare(i, cellPerSide);
+    // Aggiungo allo square Element la classe square-clicked quado clicco sopra uno degli square
+    squareElement.addEventListener("click", function () {
+      this.classList.add("square-clicked");
+    });
+    // Aggiungo alla grid lo square Element
+    grid.append(squareElement);
+  }
+  wrapGrid.append(grid);
 });
+
+/*****************************
+ FUNZIONI
+ *****************************/
+
+function createGridSquare(num, cells) {
+  // Inserire numeri crescenti con span
+  const span = document.createElement("span");
+  span.append(num);
+
+  // Creare nodo square
+  const square = document.createElement("div");
+  square.classList.add("square", "square-number");
+
+  square.style.width = `calc(100% / ${cells})`;
+
+  square.style.height = `calc(100% / ${cells})`;
+
+  //   Inserisco lo span nel nodo square
+  square.append(span);
+
+  //   Ritorno
+  return square;
+}

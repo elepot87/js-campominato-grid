@@ -82,6 +82,11 @@ header {
   background-color: #6495ed;
 }
 
+.square-number {
+  font-size: 12px;
+  color: #000;
+}
+
 /* Footer */
 
 footer {
