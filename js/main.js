@@ -38,6 +38,14 @@ btnPlay.addEventListener("click", function () {
       cellsNumber = 49;
       cellPerSide = 7;
   }
-  console.log(cellsNumber);
-  console.log(cellPerSide);
+  //   console.log(cellsNumber);
+  //   console.log(cellPerSide);
+
+  // Generazione della griglia totale (div con classe grid)
+  const grid = document.createElement("div");
+  grid.classList.add("grid");
+  wrapGrid.append(grid);
+
+  //   Generare le celle/square
+  for (let i = 1; i <= cellsNumber; i++) {}
 });
