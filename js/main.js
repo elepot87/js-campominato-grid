@@ -10,7 +10,34 @@ const btnPlay = document.querySelector(".btn-play");
 
 const wrapGrid = document.querySelector(".wrap-grid");
 
+const difficultLevel = document.getElementById("level-select");
+
 btnPlay.addEventListener("click", function () {
   //  reset di h2
   wrapGrid.innerHTML = "";
+
+  //   Creare la griglia a seconda del livello che viene selezionato dall'utente
+  const gridLevel = difficultLevel.value;
+  //   console.log(gridLevel);
+
+  let cellsNumber;
+  let cellPerSide;
+
+  switch (gridLevel) {
+    case "1":
+      cellsNumber = 100;
+      cellPerSide = 10;
+      break;
+
+    case "2":
+      cellsNumber = 81;
+      cellPerSide = 9;
+      break;
+
+    case "3":
+      cellsNumber = 49;
+      cellPerSide = 7;
+  }
+  console.log(cellsNumber);
+  console.log(cellPerSide);
 });
