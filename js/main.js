@@ -4,13 +4,13 @@
 // con difficoltà 3 => tra 1 e 49
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
-// Aggiugno evento al clic sul btn Play
-
-const btnPlay = document.querySelector(".btn-play");
-
+// Creo le mie variabili per la griglia e la selezione del livello, che mi serviranno al click dell btn Play
 const wrapGrid = document.querySelector(".wrap-grid");
 
 const difficultLevel = document.getElementById("level-select");
+
+// Aggiugno evento al clic sul btn Play
+const btnPlay = document.querySelector(".btn-play");
 
 btnPlay.addEventListener("click", function () {
   //  reset di h2
@@ -18,7 +18,6 @@ btnPlay.addEventListener("click", function () {
 
   //   Creare la griglia a seconda del livello che viene selezionato dall'utente
   const gridLevel = difficultLevel.value;
-  //   console.log(gridLevel);
 
   let cellsNumber;
   let cellPerSide;
@@ -38,8 +37,6 @@ btnPlay.addEventListener("click", function () {
       cellsNumber = 49;
       cellPerSide = 7;
   }
-  //   console.log(cellsNumber);
-  //   console.log(cellPerSide);
 
   // Generazione della griglia totale (div con classe grid)
   const grid = document.createElement("div");
@@ -55,6 +52,7 @@ btnPlay.addEventListener("click", function () {
     // Aggiungo alla grid lo square Element
     grid.append(squareElement);
   }
+  //   Appendo alla wrap grid (main in html) l'elemento creato sopra che ha la classe grid
   wrapGrid.append(grid);
 });
 
