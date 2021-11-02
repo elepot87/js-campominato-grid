@@ -3,3 +3,11 @@
 // con difficoltà 2 => tra 1 e 81
 // con difficoltà 3 => tra 1 e 49
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro.
+
+// Aggiugno evento al clic sul btn Play
+
+const btnPlay = document.querySelector(".btn-play");
+
+btnPlay.addEventListener("click", function () {
+  console.log("click");
+});

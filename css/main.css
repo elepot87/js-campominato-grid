@@ -61,6 +61,26 @@ header {
   margin: 20px 0;
 }
 
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 500px;
+  border: 1px solid #000;
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.square-clicked {
+  background-color: #6495ed;
+}
+
 /* Footer */
 
 footer {
