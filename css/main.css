@@ -1,3 +1,4 @@
+/* General */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,4 +14,40 @@ body {
 
 main {
   flex-grow: 1;
+  background-color: #7fffd4;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left .logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.header-left .title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.header-right #level-select {
+  margin-left: 5px;
+  padding: 3px 5px;
+  width: 180px;
+}
+
+.header-right .btn-play {
+  padding: 3px 5px;
+  margin-left: 5px;
+  width: 80px;
 }
