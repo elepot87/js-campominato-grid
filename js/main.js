@@ -8,6 +8,9 @@
 
 const btnPlay = document.querySelector(".btn-play");
 
+const wrapGrid = document.querySelector(".wrap-grid");
+
 btnPlay.addEventListener("click", function () {
-  console.log("click");
+  //  reset di h2
+  wrapGrid.innerHTML = "";
 });
