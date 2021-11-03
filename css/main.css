@@ -78,13 +78,14 @@ header {
   cursor: pointer;
 }
 
-.square-clicked {
-  background-color: #6495ed;
-}
-
 .square-number {
   font-size: 12px;
   color: #000;
+}
+
+.square-clicked {
+  background-color: #6495ed;
+  color: #fff;
 }
 
 /* Footer */
